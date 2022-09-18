@@ -10,9 +10,10 @@ function renderCoffee(coffee) {
     return html;
 }
 
+// Naz- Gutted the inside of the for parameter and started from scratch to reverse its order
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
