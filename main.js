@@ -49,6 +49,22 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
+//Function that filters through the coffees
+
+function lookForCoffee() {
+    //The roast variable turns anything typed in the search box to lower case
+    let roast = search.value.toLowerCase();
+    let searchedCoffees = [];
+    coffees.forEach(function(coffee){
+        if (coffee.name.toLowerCase().includes(roast)) {
+            searchedCoffees.push(coffee);
+        }
+    });
+    tbody.innerHTML = renderCoffees(searchedCoffees);
+}
+
+
+
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
@@ -56,3 +72,16 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+
+
+//This search calls to the search input ID in html
+let search = document.querySelector("#search");
+//This was to test that typing in the search bar will console log what is in there.
+
+// function typeSearch(){
+//     console.log(search.value)
+// }
+
+//This will call to the function that searches for coffees when anything in the search input is typed
+search.addEventListener('keyup', lookForCoffee);
