@@ -76,7 +76,7 @@ function addCoffee(e) {
     let newCoffee = {
         id : coffees.length + 1,
         name : newCoffeeName.value,
-        roast : addRoast.value
+        roast : addRoast.value.toLowerCase()
     }
     coffees.push(newCoffee);
 }
