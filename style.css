@@ -1,3 +1,6 @@
+body, nav {
+    background-color: #998247;
+}
 
 h1 {
     display: flex;
@@ -9,4 +12,7 @@ h1 {
     height: 100px;
     border: 2px solid black;
     margin: 1rem;
+    background-color: #b7a567;
+    box-shadow: 4px 8px;
+
 }
