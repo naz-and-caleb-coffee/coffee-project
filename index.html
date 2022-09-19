@@ -9,19 +9,20 @@
 
 </head>
 <body>
+    <nav>
     <h1>Coffee!</h1>
+    </nav>
     <hr>
     <div class="container d-flex justify-content-center">
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
+    <form class="d-flex">
+        <select id="roast-selection" class="form-select" aria-label="Default select example">
             <option>Light</option>
             <option>Medium</option>
             <option>Dark</option>
             <option>All</option>
         </select>
         <!--This is the searchbox-->
-        <input type="text" id="search" placeholder="Enter Name of Coffee"/>
+        <input type="text" id="search" placeholder="Coffee Name"/>
         <input id="submit" type="submit"/>
     </form>
         <h4>Add a Coffee</h4>
@@ -36,7 +37,7 @@
         </div>
 
     <div class="container d-flex flex-direction-column text-center">
-    <div id ="coffees" class="d-flex flex-wrap m-auto">
+    <div id ="coffees" class="d-flex flex-wrap m-auto justify-content-center">
 
     </div>
     </div>
