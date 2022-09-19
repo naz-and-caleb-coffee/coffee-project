@@ -1,11 +1,13 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = ` <div class="card">
+        <div class="card-body">
+         <h5 class="card-title">${coffee.id}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${coffee.name}</h6>
+            <p class="card-text">${coffee.roast}</p> 
+        </div>
+    </div>`
 
     return html;
 }
