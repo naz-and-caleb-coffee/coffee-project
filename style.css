@@ -4,3 +4,9 @@ h1 {
     flex-direction: row;
     justify-content: center;
 }
+.card {
+    width: 150px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 2rem;
+}
