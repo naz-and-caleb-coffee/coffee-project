@@ -69,7 +69,19 @@ function lookForCoffee() {
     tbody.innerHTML = renderCoffees(searchedCoffees);
 }
 
+function newCoffeeId(){
+    var coffeeId = coffees['length']
+}
 
+function addToCoffees() {
+    var newCoffeeId = coffees['length']+1
+    coffees.push(`${newCoffeeId}${addingCoffeeName}${addingRoast}`)
+}
+
+var addingCoffeeName = document.querySelector('#addCoffee')
+var addingRoast = document.querySelector('#typeOfRoasts')
+var pushCoffeeCard = document.querySelector('#pushToCoffee')
+pushCoffeeCard.addEventListener('click', addToCoffees)
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
