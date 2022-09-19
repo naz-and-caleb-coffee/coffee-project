@@ -78,7 +78,9 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-
+var updateRoast = document.querySelector('#roast-selection');
+updateRoast.addEventListener('change', updateCoffees)
+submitButton.addEventListener('click', updateCoffees);
 
 
 //This search calls to the search input ID in html
