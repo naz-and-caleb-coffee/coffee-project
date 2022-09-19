@@ -85,3 +85,12 @@ let search = document.querySelector("#search");
 
 //This will call to the function that searches for coffees when anything in the search input is typed
 search.addEventListener('keyup', lookForCoffee);
+
+let divTable = document.createElement("div"); //create new <div>
+divTable.id = "tableDiv";
+
+let tables = document.getElementsByTagName("table"); //HTMLCollection which is live, no need to delete "old tables"
+while (tables.length > 0) divTable.append(tables[0]); //add every <table> to the new <div>
+
+let body = document.querySelector("body"); //change to the preferred selector
+body.append(divTable); //append new <div> to the selected Element, in this case <body>
