@@ -1,10 +1,9 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = ` <div class="card">
+    var html = ` <div class="card" style="width: 150px; height: 100px; border: 2px solid black; margin: 2rem;">
         <div class="card-body">
-         <h5 class="card-title">${coffee.id}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">${coffee.name}</h6>
+            <h5 class="card-subtitle mb-2 text-muted">${coffee.name}</h5>
             <p class="card-text">${coffee.roast}</p> 
         </div>
     </div>`
