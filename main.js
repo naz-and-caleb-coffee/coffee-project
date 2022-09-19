@@ -86,7 +86,7 @@ let newCoffeeName = document.querySelector('#addCoffee');
 let newCoffeeSubmitButton = document.querySelector('#pushToCoffee');
 newCoffeeSubmitButton.addEventListener('click', addCoffee);
 
-
+newCoffeeSubmitButton.addEventListener('click', lookForCoffee)
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
