@@ -20,6 +20,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+//This function filters the coffee when clicking the dropdown
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value.toLowerCase();
@@ -55,8 +56,7 @@ var coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-//Function that filters through the coffees
-
+//Function that filters through the coffees when using the search bar
 function lookForCoffee() {
     //The roast variable turns anything typed in the search box to lower case
     let roast = search.value.toLowerCase();
@@ -75,16 +75,17 @@ function addCoffee(e) {
     e.preventDefault();
     let newCoffee = {
         id : coffees.length + 1,
-        name : addingCoffeeName.value,
-        roast : addingRoast.value
+        name : newCoffeeName.value,
+        roast : addRoast.value
     }
     coffees.push(newCoffee);
 }
 
-var addingCoffeeName = document.querySelector('#addCoffee')
-var addingRoast = document.querySelector('#typeOfRoasts')
-var pushCoffeeCard = document.querySelector('#pushToCoffee')
-pushCoffeeCard.addEventListener('click', addCoffee)
+let addRoast = document.querySelector('#typeOfRoasts');
+let newCoffeeName = document.querySelector('#addCoffee');
+let newCoffeeSubmitButton = document.querySelector('#pushToCoffee');
+newCoffeeSubmitButton.addEventListener('click', addCoffee);
+
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
@@ -109,11 +110,3 @@ let search = document.querySelector("#search");
 //This will call to the function that searches for coffees when anything in the search input is typed
 search.addEventListener('keyup', lookForCoffee);
 
-let divTable = document.createElement("div"); //create new <div>
-divTable.id = "tableDiv";
-
-let tables = document.getElementsByTagName("table"); //HTMLCollection which is live, no need to delete "old tables"
-while (tables.length > 0) divTable.append(tables[0]); //add every <table> to the new <div>
-
-let body = document.querySelector("body"); //change to the preferred selector
-body.append(divTable); //append new <div> to the selected Element, in this case <body>
