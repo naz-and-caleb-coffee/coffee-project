@@ -7,15 +7,7 @@ h1 {
     flex-direction: row;
     justify-content: center;
 }
-.card {
-    width: 200px;
-    height: 100px;
-    border: 2px solid black;
-    margin: 1rem;
-    background-color: #b7a567;
-    box-shadow: 4px 8px;
 
-}
 
 a {
     text-decoration: none;
@@ -25,4 +17,26 @@ a {
 
 a:hover {
     color: black;
+}
+
+.card{
+    width:150px;
+    height:110px;
+    border:2px solid black;
+    margin:1rem;
+    background-color:#b7a567;
+    box-shadow:4px 8px;
+
+}
+
+.light{
+    background-color:#b7a567;
+}
+
+.medium{
+    background-color:sienna;
+}
+
+.dark{
+    background-color:saddlebrown;
 }

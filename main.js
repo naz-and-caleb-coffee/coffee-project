@@ -1,15 +1,40 @@
 "use strict"
 //This function adds the cards to the html
 function renderCoffee(coffee) {
-    var html = ` <div class="card">
-        <a href="#"><div class="card-body">
-            <h5 class="card-subtitle mb-2 text-muted">${coffee.name}</h5>
+    switch(coffee.roast){
+        case "light": {
+            var html = ` <div class="card">
+        <div class="card-body light">
+            <h5 class="card-subtitle mb-2">${coffee.name}</h5>
             <p class="card-text">${coffee.roast.toUpperCase()}</p> 
-        </div></a>
+        </div>
     </div>`
+            break;
+        }
+        case "medium": {
+            var html = ` <div class="card">
+        <div class="card-body medium">
+            <h5 class="card-subtitle mb-2">${coffee.name}</h5>
+            <p class="card-text">${coffee.roast.toUpperCase()}</p> 
+        </div>
+    </div>`
+            break;
+        }
+        case "dark": {
+            var html = ` <div class="card">
+        <div class="card-body dark">
+            <h5 class="card-subtitle mb-2">${coffee.name}</h5>
+            <p class="card-text">${coffee.roast.toUpperCase()}</p> 
+        </div>
+    </div>`
+            break;
+        }
+
+    }
 
     return html;
 }
+
 
 // Naz- Gutted the inside of the for parameter and started from scratch to reverse its order
 function renderCoffees(coffees) {
