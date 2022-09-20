@@ -1,5 +1,5 @@
 "use strict"
-
+//This function adds the cards to the html
 function renderCoffee(coffee) {
     var html = ` <div class="card">
         <a href="#"><div class="card-body">
@@ -80,7 +80,7 @@ function addCoffee(e) {
     }
     coffees.push(newCoffee);
 }
-
+//Event listeners and ID's for the function to add coffee
 let addRoast = document.querySelector('#typeOfRoasts');
 let newCoffeeName = document.querySelector('#addCoffee');
 let newCoffeeSubmitButton = document.querySelector('#pushToCoffee');
