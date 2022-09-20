@@ -16,3 +16,13 @@ h1 {
     box-shadow: 4px 8px;
 
 }
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover {
+    color: black;
+}
