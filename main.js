@@ -70,7 +70,7 @@ function lookForCoffee() {
 }
 
 
-
+//This function lets you add a new coffee card
 function addCoffee(e) {
     e.preventDefault();
     let newCoffee = {
@@ -85,6 +85,7 @@ let addRoast = document.querySelector('#typeOfRoasts');
 let newCoffeeName = document.querySelector('#addCoffee');
 let newCoffeeSubmitButton = document.querySelector('#pushToCoffee');
 newCoffeeSubmitButton.addEventListener('click', addCoffee);
+
 
 newCoffeeSubmitButton.addEventListener('click', lookForCoffee)
 var tbody = document.querySelector('#coffees');
