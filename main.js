@@ -102,11 +102,6 @@ submitButton.addEventListener('click', lookForCoffee);
 
 //This search calls to the search input ID in html
 let search = document.querySelector("#search");
-//This was to test that typing in the search bar will console log what is in there.
-
-// function typeSearch(){
-//     console.log(search.value)
-// }
 
 //This will call to the function that searches for coffees when anything in the search input is typed
 search.addEventListener('keyup', lookForCoffee);
